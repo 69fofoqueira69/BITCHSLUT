@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   background: #e3e5e8;
@@ -10,10 +16,10 @@ body {
 }
 
 .profile-page {
-  width: min(1180px, 95vw);
-  margin: 20px auto;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
   padding: 28px 26px;
-  border: 2px solid #000;
   background: #efefef;
 }
 
@@ -27,7 +33,7 @@ body {
 .outline-btn {
   width: 175px;
   height: 72px;
-  border: 4px solid #111;
+  border: none;
   background: transparent;
   font-size: 40px;
   font-weight: 500;
@@ -39,18 +45,19 @@ body {
   display: grid;
   grid-template-columns: 1fr 0.95fr;
   gap: 28px;
-  align-items: start;
+  align-items: stretch;
+  min-height: calc(100vh - 152px);
 }
 
 .info-card,
 .image-card {
-  border: 4px solid #111;
+  border: none;
   background: #f3f3f3;
 }
 
 .info-card {
   padding: 22px;
-  min-height: 560px;
+  min-height: 100%;
   font-size: 40px;
   line-height: 1.2;
 }
@@ -69,7 +76,7 @@ body {
 }
 
 .image-card {
-  min-height: 570px;
+  min-height: 100%;
   position: relative;
   display: flex;
   align-items: center;
@@ -87,7 +94,7 @@ body {
 .img-placeholder {
   width: 100%;
   padding: 20px;
-  font-size: 86px;
+  font-size: clamp(44px, 5vw, 86px);
   line-height: 1.05;
   margin: 0;
   text-align: left;
@@ -102,6 +109,7 @@ body {
 
   .content-grid {
     grid-template-columns: 1fr;
+    min-height: auto;
   }
 
   .info-card {
@@ -109,8 +117,8 @@ body {
     font-size: 30px;
   }
 
-  .img-placeholder {
-    font-size: 66px;
+  .image-card {
+    min-height: 50vh;
   }
 }
 
@@ -123,12 +131,6 @@ body {
     font-size: 24px;
     width: 120px;
     height: 52px;
-    border-width: 3px;
-  }
-
-  .info-card,
-  .image-card {
-    border-width: 3px;
   }
 
   .info-card {
@@ -136,7 +138,7 @@ body {
     padding: 14px;
   }
 
-  .img-placeholder {
-    font-size: 44px;
+  .image-card {
+    min-height: 42vh;
   }
 }
