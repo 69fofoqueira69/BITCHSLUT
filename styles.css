@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #e3e5e8;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+.profile-page {
+  width: min(1180px, 95vw);
+  margin: 20px auto;
+  padding: 28px 26px;
+  border: 2px solid #000;
+  background: #efefef;
+}
+
+.top-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.outline-btn {
+  width: 175px;
+  height: 72px;
+  border: 4px solid #111;
+  background: transparent;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.info-card,
+.image-card {
+  border: 4px solid #111;
+  background: #f3f3f3;
+}
+
+.info-card {
+  padding: 22px;
+  min-height: 560px;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.info-card p {
+  margin: 0 0 8px;
+}
+
+.bio-title {
+  margin-top: 10px;
+}
+
+#biografia {
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+.image-card {
+  min-height: 570px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.img-placeholder {
+  width: 100%;
+  padding: 20px;
+  font-size: 86px;
+  line-height: 1.05;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 1000px) {
+  .outline-btn {
+    font-size: 32px;
+    width: 150px;
+    height: 62px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    min-height: auto;
+    font-size: 30px;
+  }
+
+  .img-placeholder {
+    font-size: 66px;
+  }
+}
+
+@media (max-width: 650px) {
+  .profile-page {
+    padding: 16px;
+  }
+
+  .outline-btn {
+    font-size: 24px;
+    width: 120px;
+    height: 52px;
+    border-width: 3px;
+  }
+
+  .info-card,
+  .image-card {
+    border-width: 3px;
+  }
+
+  .info-card {
+    font-size: 24px;
+    padding: 14px;
+  }
+
+  .img-placeholder {
+    font-size: 44px;
+  }
+}
