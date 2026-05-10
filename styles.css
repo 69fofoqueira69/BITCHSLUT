@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #e3e5e8;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+.profile-page {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 28px 26px;
+  background: #efefef;
+}
+
+.top-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.outline-btn {
+  width: 175px;
+  height: 72px;
+  border: none;
+  background: transparent;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 28px;
+  align-items: stretch;
+  min-height: calc(100vh - 152px);
+}
+
+.info-card,
+.image-card {
+  border: none;
+  background: #f3f3f3;
+}
+
+.info-card {
+  padding: 22px;
+  min-height: 100%;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.info-card p {
+  margin: 0 0 8px;
+}
+
+.bio-title {
+  margin-top: 10px;
+}
+
+#biografia {
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+.image-card {
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.img-placeholder {
+  width: 100%;
+  padding: 20px;
+  font-size: clamp(44px, 5vw, 86px);
+  line-height: 1.05;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 1000px) {
+  .outline-btn {
+    font-size: 32px;
+    width: 150px;
+    height: 62px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .info-card {
+    min-height: auto;
+    font-size: 30px;
+  }
+
+  .image-card {
+    min-height: 50vh;
+  }
+}
+
+@media (max-width: 650px) {
+  .profile-page {
+    padding: 16px;
+  }
+
+  .outline-btn {
+    font-size: 24px;
+    width: 120px;
+    height: 52px;
+  }
+
+  .info-card {
+    font-size: 24px;
+    padding: 14px;
+  }
+
+  .image-card {
+    min-height: 42vh;
+  }
+}
